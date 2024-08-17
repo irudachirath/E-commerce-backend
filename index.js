@@ -1,5 +1,5 @@
 const dotenv = require("dotenv");
-dotenv.config({ path: "./.env" });
+dotenv.config({ path: "/etc/app.env" });
 
 const express = require("express");
 const app = express();
@@ -17,7 +17,7 @@ const tempOrderRoutes = require("./controllers/temp-orders");
 const mainCategoryRoutes = require("./controllers/categories");
 
 // Functionalities
-const cardDeailsRoutes = require('./functionalities/cardDetails');
+const cardDeailsRoutes = require("./functionalities/cardDetails");
 const registerRoutes = require("./functionalities/register");
 const cartItemRoutes = require("./functionalities/cart");
 const loginRoutes = require("./functionalities/login");
@@ -47,7 +47,7 @@ app.use("/temp-orders", tempOrderRoutes);
 app.use("/main-categories", mainCategoryRoutes);
 
 // Functionalities
-app.use('/card-details',cardDeailsRoutes);
+app.use("/card-details", cardDeailsRoutes);
 app.use("/register", registerRoutes);
 app.use("/cart", cartItemRoutes);
 app.use("/login", loginRoutes);
