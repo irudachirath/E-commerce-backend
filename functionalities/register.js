@@ -26,7 +26,7 @@ router.post("/", async (req, res) => {
         1,
       ];
       await db.query(
-        "INSERT INTO customer (...) VALUES (?, ?, ?, ..., 1)",
+        "INSERT INTO customer (Hashed_password, First_name, Last_name, Email, Phone_number, Address_line1, Address_line2, City, Province, Zipcode, Is_registered) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1)",
         values
       );
       res.send("Registration succeeded.");
